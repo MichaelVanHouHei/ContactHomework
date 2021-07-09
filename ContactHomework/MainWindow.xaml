@@ -1,0 +1,44 @@
+﻿<mah:MetroWindow x:Class="ContactHomework.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ContactHomework"
+        xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
+        mc:Ignorable="d"
+        
+        Title="Contact DetailMain" Height="450" Width="800"  >
+    <mah:MetroWindow.RightWindowCommands>
+        <mah:WindowCommands>
+            <Button  Content="{Binding status}" Click="Button_Click_1" >
+                <Button.ContentTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal">
+
+                            <TextBlock Margin="4 0 0 0"
+                                       VerticalAlignment="Center"
+                                       Text="{Binding }" />
+                        </StackPanel>
+                    </DataTemplate>
+                </Button.ContentTemplate>
+            </Button>
+        </mah:WindowCommands>
+    </mah:MetroWindow.RightWindowCommands>
+
+    <Grid>
+         <Grid.RowDefinitions>
+            <RowDefinition Height="2*"> </RowDefinition>
+            <RowDefinition Height="8*"></RowDefinition>
+             <RowDefinition Height="1*"></RowDefinition>
+        </Grid.RowDefinitions>
+         <StackPanel Grid.Row="0">
+             <Label FontSize="36">Contact Mangament System</Label>
+        </StackPanel>
+        <StackPanel Grid.Row="1">
+                <Frame x:Name="ContentFrame" NavigationUIVisibility="Hidden"></Frame>
+        </StackPanel>
+        <StackPanel Grid.Row="2">
+               <Label>developed by mv</Label>
+        </StackPanel>
+    </Grid>
+</mah:MetroWindow>
